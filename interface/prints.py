@@ -2,22 +2,17 @@ from data import *
 
 
 def print_start() -> None:
-    print(
-        f"""---------------------- 
-          {max_score}
-----------------------
-Диллер должен бросать 
-пока его счёт < {dealer_stop_score}
-----------------------"""
-    )
-
+    print("-" * 22)
+    print(' '*9, max_score, ' '*9)
+    print("-" * 22)
+    print(f"""Диллер должен бросать 
+пока его счёт < {dealer_stop_score}""")
+    print("-" * 22)
 
 def print_actions() -> None:
-    print(
-        """hit  | Бросить кости  
-hold | Остановиться
-----------------------"""
-    )
+    print("hit  | Бросить кости")
+    print("hold | Остановиться")
+    print("-" * 22)
 
 
 def print_end_game(*args, pl: bool = False, dil: bool = False, tepm_scores: list[int | list[int]] | None = None) -> None:
